@@ -1,3 +1,23 @@
+# E-Zee-Pass Password Generator
+## Description
+The intent of this application is to allow the user to select several different parameters in order to generate a random password. This includes the user inputting their desired length as well as if they'd like lowercase, uppercase, numbers, or special characters in their password. A limitation of this password is how to clear the password text area in order to generate a new password. The user currently has to refresh the application in order to generate a new password.
+
+# Methodologies
+![Javascript logo](media/javascript.png)=250x250
+![HTML and CSS logo](media/html-css.png)
+
+# Application Features
+### Example of password length input prompt
+![Example of an input box asking user to input a number for the password length](media/length-input.png)
+
+### Example of user parameter confirmation
+![Example of a confirmation prompt to determine if user would like uppercase letters](media/parameter-confirm.png)
+
+### Randomly generated password
+![Example of a randomly generated password](media/generated-password.png)
+
+# Commit History
+
 ### Established basic functionality
 - Wrote pseudocode to establish initial generator functionality
 - Established basic functions for each random character to be generated
@@ -30,3 +50,6 @@
 - Added validation to ensure user selected at least one password parameter
 - Joined final array of password key into a string then stored it and returned it for printing
 
+# Credit
+## UCF Coding Bootcamp Teacher Assistant Ryan Strickler
+## [Traversy Media for providing the foundation for my code](https://www.youtube.com/watch?v=duNmhKgtcsI)
