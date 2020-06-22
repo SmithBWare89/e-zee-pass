@@ -20,3 +20,13 @@
 - Updated loops in character generator functions to loop through the UTF-8/ASCII code character sets to generate them all then push them into the storedCharacters key.
 - Ran into issue where special characters could not be housed as a string so they were put into their own separate key. They will then be concatenated with the array of the stored letters and numbers
 - Added comments to user inputs to explain the flow
+
+### Feature/generate-password
+- Established generatePassword function to accept boolean values from user input
+- Verified if user input is true for lower, uppercase, and numbers using boolean statements. If true then corresponding function is ran
+- Since special characters are already stored in a key, established while loops to check if special characters is true/false
+- If user selected they did not want special characters then a while loop will run to select a random index of the storedCharacters key and push it into the password key
+- If user selected special characters then the special characters will be concatenated with the storedCharacters key into a new variable and the random index of that array will be pushed into the password key
+- Added validation to ensure user selected at least one password parameter
+- Joined final array of password key into a string then stored it and returned it for printing
+
