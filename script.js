@@ -9,9 +9,8 @@ var answer = {
   passLength: 0,
   password: []
 }
-
-// Variable to hold final password
-var finalPassword;
+    // Variable to hold final password
+    var finalPassword;
 
 // Write password to the #password input
 function writePassword() {
@@ -88,12 +87,13 @@ function writePassword() {
 
   // Set password variable to be returned output of generatePassword function
   var password = finalPassword;
+  
   // set ID password to passWord text variable
   var passwordText = document.querySelector("#password");
   
   // Set passwordText key to equal password variable
   passwordText.value = password;
-
+  alert("Your password has been generated. Please refresh webpage to generate a new password.");
 }
 
 // Add event listener to generate button
