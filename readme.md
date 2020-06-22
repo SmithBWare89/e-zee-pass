@@ -3,8 +3,8 @@
 The intent of this application is to allow the user to select several different parameters in order to generate a random password. This includes the user inputting their desired length as well as if they'd like lowercase, uppercase, numbers, or special characters in their password. A limitation of this password is how to clear the password text area in order to generate a new password. The user currently has to refresh the application in order to generate a new password.
 
 # Methodologies
-![Javascript logo](media/javascript.png)
-![HTML and CSS logo](media/html-css.png)
+![Javascript logo](media/Javascript.png)
+![HTML and CSS logo](media/HTML-CSS.png)
 
 # Application Features
 ### Example of password length input prompt
