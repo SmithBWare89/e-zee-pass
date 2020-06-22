@@ -4,9 +4,53 @@
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+var answer = {
+  
+}
 
 // Write password to the #password input
 function writePassword() {
+    // Accept user input for length (8 - 128)
+    var lengthConfirm = prompt("How long would you like your password to be? (Between 8 and 128 characters)");
+    lengthConfirm = parseInt(lengthConfirm);
+      if (isNaN(lengthConfirm)) {
+        alert("Please enter a valid number!");
+        writePassword();
+      } else if (lengthConfirm < 8 || lengthConfirm > 128) {
+        alert("Your password length must be between 8 and 128 characters!");
+        writePassword();
+      } else {
+        answer.passLength = lengthConfirm;
+      }
+    // Confirm is user wants lowercase letters
+    var lowerConfirm = confirm("Would you like lowercase letters in your password?");
+        if (lowerConfirm) {
+          answer.lower = true;
+        } else {
+          answer.lower = false;
+        }
+    // Confirm if user wants uppercase letters
+    var upperConfirm = confirm("Would you like uppercase letters in your password??");
+        if (upperConfirm) {
+          answer.upper = true;
+        } else {
+          answer.upper = false;
+        }
+    // Confirm if user wants numbers
+    var numConfirm = confirm("Would you like numbers in your password?");
+        if (numConfirm) {
+          answer.number = true;
+        } else {
+          answer.number = false;
+        }
+    // Confirm if user wants special characters
+    var specialConfirm = confirm("Would you like special characters in your password?");
+        if (specialConfirm) {
+          answer.special = true;
+        } else {
+          answer.special = false;
+        }
+
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
@@ -18,12 +62,6 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-  // Accept user input for length (8 - 128)
-  var lengthConfirm = prompt("How long would you like your password to be?");
-  lengthConfirm = parseInt(lengthConfirm);
-
-  // Confirm is user wants lowercase letters
-  var lowerConfirm = confirm("Would you like lowercase letters in your password?");
     // If yes
       // Generate randomLowercase
       function randomLower(){}  
@@ -35,8 +73,6 @@ generateBtn.addEventListener("click", writePassword);
     // else
       // Move to next prompt
 
-  // Confirm if user wants uppercase letters
-  var upperConfirm = confirm("Would you like uppercase letters in your password??");
     // If yes
       // Generate randomUppercase
       function randomUpper(){}
@@ -48,8 +84,6 @@ generateBtn.addEventListener("click", writePassword);
     // else
       // Move to next prompt
 
-  // Confirm if user wants numbers
-  var numConfirm = confirm("Would you like numbers in your password?");
     // If yes
       // Generate randomNumber
       function randomNumber(){}
@@ -61,8 +95,6 @@ generateBtn.addEventListener("click", writePassword);
       // Move to the next prompt
 
 
-  // Confirm if user wants special characters
-  var specialConfirm = confirm("Would you like special characters in your password?");
     // If yes
       // Generate randomSpecialChar
       function randomSpecChar(){}
