@@ -7,13 +7,13 @@ var answer = {
   specialCharList: ["!",'"',"#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[","'\'","]","^","_","`","{","|","}","~"],
   storedCharacters:[],
   passLength: 0,
-  password: []
 }
-    // Variable to hold final password
-    var finalPassword;
+
+finalPassword = [];
 
 // Write password to the #password input
 function writePassword() {
+    finalPassword = [];
     // Ask user how long they'd like their password to be
     var lengthConfirm = prompt("How long would you like your password to be? (Between 8 and 128 characters)");
     // Convert user input into a number and store in lengthConfirm variable
@@ -82,59 +82,52 @@ function writePassword() {
         writePassword();
       }
 
-  // Pass boolean values of user input into generatePassword function
-  generatePassword(answer.lower, answer.upper, answer.number, answer.special);
-
   // Set password variable to be returned output of generatePassword function
-  var password = finalPassword;
+  var password = generatePassword();
   
   // set ID password to passWord text variable
   var passwordText = document.querySelector("#password");
   
   // Set passwordText key to equal password variable
   passwordText.value = password;
-  alert("Your password has successfully generated. Please refresh the webpage to generate a new password.");
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 // Declare function that accepts the booleans of user input
-function generatePassword(lower, upper, number, special) {
+function generatePassword() {
   // If user selected lowercase letters
-  if (lower) {
+  if (answer.lower) {
     // Run lowerLetters function
     lowerLetters();
-  } if (upper) { /* If user selected uppercase letters */
+  } if (answer.upper) { /* If user selected uppercase letters */
     // Run upperLetters function
     upperLetters();
-  } if (number) { /* If user selected numbers */
+  } if (answer.number) { /* If user selected numbers */
     // Run numbers function
     numbers();
   }
 
   // If user did not select special characters and passLength > 0
-  while (special === false && answer.passLength > 0) {
+  while (answer.special === false && answer.passLength > 0) {
     // Push the random index of storedCharacters key into the password key
-    answer.password.push(answer.storedCharacters[Math.floor(Math.random() * answer.storedCharacters.length)]);
+    finalPassword.push(answer.storedCharacters[Math.floor(Math.random() * answer.storedCharacters.length)]);
     // Subtract one from the length of passLength
     answer.passLength--;
     }
 
   /*While user selected special characters and passLength > 0*/
-  while (special === true && answer.passLength > 0) {
+  while (answer.special === true && answer.passLength > 0) {
     // Concatenate the special characters key with the storedCharacters key
     var newList = answer.storedCharacters.concat(answer.specialCharList);
     // Push a random index of the generated new list key into the password key's array
-    answer.password.push(newList[Math.floor(Math.random() * newList.length)]);
+    finalPassword.push(newList[Math.floor(Math.random() * newList.length)]);
     // Decrease 1 from the requested input length
     answer.passLength--;
   }
-  // Join the items in the password key's array together
-  finalPassword = answer.password.join('');
-
   // Return the final joined password as a string
-  return finalPassword;
+  return finalPassword.join('');
 }
 
 

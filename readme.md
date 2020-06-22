@@ -1,6 +1,6 @@
 # E-Zee-Pass Password Generator - [Link](https://smithbware89.github.io/e-zee-pass/)
 ## Description
-The intent of this application is to allow the user to select several different parameters in order to generate a random password. This includes the user inputting their desired length as well as if they'd like lowercase, uppercase, numbers, or special characters in their password. A limitation of this password is how to clear the password text area in order to generate a new password. The user currently has to refresh the application in order to generate a new password.
+The intent of this application is to allow the user to select several different parameters in order to generate a random password. This includes the user inputting their desired length as well as if they'd like lowercase, uppercase, numbers, or special characters in their password.
 
 # Methodologies
 ![Javascript logo](media/Javascript.png)
@@ -52,6 +52,9 @@ The intent of this application is to allow the user to select several different 
 
 ### Update grammar
 - Updated grammar on input prompts
+
+### Fixed limitation
+- Application previously limited to not being able to reset password within the text area due to the password being stored as a key/value in an object. Took it out of there and declared it as a separate variable with an empty array outside of the writePassword function then redeclared it as empty within it so on page load it's empty and when the function is ran it's empty again.
 
 # Credit
 ## UCF Coding Bootcamp Teacher Assistant Ryan Strickler
