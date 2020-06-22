@@ -21,12 +21,12 @@ function writePassword() {
       // if user input is not a number
       if (isNaN(lengthConfirm)) {
         // Alert the user that their input my be a number
-        alert("Please enter a valid number!");
+        alert("Please enter a number!");
         // Restart generator function
         writePassword();
       } else if (lengthConfirm < 8 || lengthConfirm > 128) { /* If user input integer is less than 8 or 128*/
         // Alert the user that their input must be between 8 and 128
-        alert("Your password length must be between 8 and 128 characters!");
+        alert("Your password length must be between 8 and 128 characters.");
         // Restart generator function
         writePassword();
       } else { /* If all conditions are satisfied */
@@ -34,7 +34,7 @@ function writePassword() {
         answer.passLength = lengthConfirm;
       }
     // Confirm is user wants lowercase letters
-    var lowerConfirm = confirm("Would you like lowercase letters in your password?");
+    var lowerConfirm = confirm("Would you like your password to include lowercase letters?");
         // If user confirms they'd want lowercase letters
         if (lowerConfirm) {
           // store boolean from input in lower key as true
@@ -44,7 +44,7 @@ function writePassword() {
           answer.lower = false;
         }
     // Confirm if user wants uppercase letters
-    var upperConfirm = confirm("Would you like uppercase letters in your password?");
+    var upperConfirm = confirm("Would you like your password to include uppercase letters?");
         // If user confirms they'd want uppercase letters
         if (upperConfirm) {
           // store boolean from input in upper key as true
@@ -54,7 +54,7 @@ function writePassword() {
           answer.upper = false;
         }
     // Confirm if user wants numbers
-    var numConfirm = confirm("Would you like numbers in your password?");
+    var numConfirm = confirm("Would you like your password to include numbers?");
         // If user confirms they'd want numbers
         if (numConfirm) {
           // store boolean from input in number key as true
@@ -64,7 +64,7 @@ function writePassword() {
           answer.number = false;
         }
     // Confirm if user wants special characters
-    var specialConfirm = confirm("Would you like special characters in your password?");
+    var specialConfirm = confirm("Would you like your password to include special characters?");
         // If user confirms they'd want special characters
         if (specialConfirm) {
           // store boolean from input in special key as true
@@ -77,7 +77,7 @@ function writePassword() {
         // If user selected no parameters
       if (answer.lower === false && answer.upper === false && answer.number === false && answer.special === false) {
         // Alert the user that they must select a parameter
-        alert("You must select at least one password parameter! Try again.");
+        alert("You must select at least one password parameter! Please try again.");
         // Restart password generator
         writePassword();
       }
@@ -93,7 +93,7 @@ function writePassword() {
   
   // Set passwordText key to equal password variable
   passwordText.value = password;
-  alert("Your password has been generated. Please refresh webpage to generate a new password.");
+  alert("Your password has successfully generated. Please refresh the webpage to generate a new password.");
 }
 
 // Add event listener to generate button

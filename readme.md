@@ -50,6 +50,9 @@ The intent of this application is to allow the user to select several different 
 - Added validation to ensure user selected at least one password parameter
 - Joined final array of password key into a string then stored it and returned it for printing
 
+### Update grammar
+- Updated grammar on input prompts
+
 # Credit
 ## UCF Coding Bootcamp Teacher Assistant Ryan Strickler
 ## [Traversy Media for providing the foundation for my code](https://www.youtube.com/watch?v=duNmhKgtcsI)
