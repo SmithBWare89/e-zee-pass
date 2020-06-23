@@ -9,7 +9,7 @@ var answer = {
   passLength: 0,
 }
 
-finalPassword = [];
+var finalPassword = [];
 
 // Write password to the #password input
 function writePassword() {
