@@ -23,12 +23,12 @@ function writePassword() {
         // Alert the user that their input my be a number
         alert("Please enter a number!");
         // Restart generator function
-        writePassword();
+        return writePassword();
       } else if (lengthConfirm < 8 || lengthConfirm > 128) { /* If user input integer is less than 8 or 128*/
         // Alert the user that their input must be between 8 and 128
         alert("Your password length must be between 8 and 128 characters.");
         // Restart generator function
-        writePassword();
+        return writePassword();
       } else { /* If all conditions are satisfied */
         // Store integer inputted as passLength key
         answer.passLength = lengthConfirm;
@@ -79,7 +79,7 @@ function writePassword() {
         // Alert the user that they must select a parameter
         alert("You must select at least one password parameter! Please try again.");
         // Restart password generator
-        writePassword();
+        return writePassword();
       }
 
   // Set password variable to be returned output of generatePassword function
