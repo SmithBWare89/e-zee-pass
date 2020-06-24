@@ -3,18 +3,18 @@
 The intent of this application is to allow the user to select several different parameters in order to generate a random password. This includes the user inputting their desired length as well as if they'd like lowercase, uppercase, numbers, or special characters in their password.
 
 # Methodologies
-![Javascript logo](media/Javascript.png)
-![HTML and CSS logo](media/HTML-CSS.png)
+![Javascript logo](assets/images/Javascript.png)
+![HTML and CSS logo](assets/images/HTML-CSS.png)
 
 # Application Features
 ### Example of password length input prompt
-![Example of an input box asking user to input a number for the password length](media/length-input.PNG)
+![Example of an input box asking user to input a number for the password length](assets/images/length-input.PNG)
 
 ### Example of user parameter confirmation
-![Example of a confirmation prompt to determine if user would like uppercase letters](media/parameter-confirm.PNG)
+![Example of a confirmation prompt to determine if user would like uppercase letters](assets/images/parameter-confirm.PNG)
 
 ### Randomly generated password
-![Example of a randomly generated password](media/generated-password.PNG)
+![Example of a randomly generated password](assets/images/generated-password.PNG)
 
 # Commit History
 
